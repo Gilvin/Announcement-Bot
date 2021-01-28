@@ -1,6 +1,6 @@
 import discord
 import os
-
+from keep_alive import keep_alive
 client = discord.Client()
 
 
@@ -31,5 +31,5 @@ async def on_message(msg):
   if msg.content.startswith('!twitter'):
     await msg.channel.send('https://twitter.com/gilvinchy')
 
-
+keep_alive()
 client.run(os.getenv("Gil_Bot"))
